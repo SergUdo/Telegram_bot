@@ -9,8 +9,6 @@ TOKEN = 'YOUR_TELEGRAM_BOT_API_TOKEN'
 
 CLOUDINESS = %w(Ясно Малооблачно Облачно Пасмурно).freeze
 
-# city = STDIN.gets.chomp.to_i
-
 uri = URI.parse("https://xml.meteoservice.ru/export/gismeteo/point/294.xml")
 
 response = Net::HTTP.get_response(uri)
@@ -28,7 +26,7 @@ forecast = doc.root.elements['REPORT/TOWN/FORECAST']
 clouds_index = forecast.elements['PHENOMENA'].attributes['cloudiness'].to_i
 clouds = CLOUDINESS[clouds_index]
 
-text_answer = city_name  + " #{min_temp} до #{max_temp} " +clouds
+text_answer = city_name  + " #{min_temp} до #{max_temp} " + clouds
 
 Telegram::Bot::Client.run(TOKEN) do |bot|
   bot.listen do |message|
@@ -37,7 +35,6 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
         bot.api.send_message(chat_id: message.chat.id,
           text: "Hello, #{message.from.first_name} you want to know weather in Warszawa?")
       when '/c'
-        # byebug
         bot.api.send_message(chat_id: message.chat.id,
           text: "Temperature, #{message.from.first_name} #{text_answer}")
       when '/end'
