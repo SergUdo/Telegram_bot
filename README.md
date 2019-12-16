@@ -1,5 +1,5 @@
 # Telegram_bot
-Telegram bot for parsing the weather.
+Telegram bot for parsing the weather. (Ruby)
 
 Enter the secret key for bot telegrams received from the BotFather in the file: weather_forecast.rb 
 
