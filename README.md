@@ -7,8 +7,8 @@ TOKEN = 'YOUR_TELEGRAM_BOT_API_TOKEN'
 
 Run the bot with the command ruby weather_forecast.rb in the console
 
-Turn on the bot with the  command /start
+Turn on the bot with the  command: /start
 
-To view the weather in Warsaw, enter the command / c
+To view the weather in Warsaw, enter the command:  /c
 
-To stop the bot, run the command /end
+To stop the bot, run the command: /end
