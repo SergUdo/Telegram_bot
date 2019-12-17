@@ -9,6 +9,6 @@ Run the bot with the command ruby weather_forecast.rb in the console
 
 Turn on the bot with the  command /start
 
-To view the weather in Warsaw, type / c
+To view the weather in Warsaw, enter the command / c
 
 To stop the bot, run the command /end
