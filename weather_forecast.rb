@@ -7,7 +7,7 @@ require 'byebug'
 
 TOKEN = 'YOUR_TELEGRAM_BOT_API_TOKEN'
 
-CLOUDINESS = %w(Ясно Малооблачно Облачно Пасмурно).freeze
+CLOUDINESS = %w(Clear Little_Cloudy Cloudy Mainly_Cloudy).freeze
 
 uri = URI.parse("https://xml.meteoservice.ru/export/gismeteo/point/294.xml")
 
